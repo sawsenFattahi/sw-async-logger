@@ -17,13 +17,13 @@ npm install sw-async-logger
 ## 🔧 How to Use
 1️⃣ Import the Logger
 
-import { logAsync, Logger, LogLevel } from "async-logger";
+import { logAsync, Logger, LogLevel } from "sw-async-logger";
 
 2️⃣ Use the @logAsync Decorator
 
 Apply @logAsync to your async functions:
 
-import { logAsync } from "async-logger";
+import { logAsync } from "sw-async-logger";
 
 class MyService {
     @logAsync
@@ -60,7 +60,7 @@ The library logs start time, execution time, and errors:
 
 You can manually log messages using the Logger class:
 
-import { Logger, LogLevel } from "async-logger";
+import { Logger, LogLevel } from "sw-async-logger";
 
 Logger.log(LogLevel.INFO, "This is an info message");
 Logger.log(LogLevel.ERROR, "Something went wrong!");
