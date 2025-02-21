@@ -1,6 +1,6 @@
 {
   "name": "perf-async-logger",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple node js library to log async function with error handling and performance tracking",
   "keywords": [
     "error",
@@ -12,6 +12,7 @@
   "author": "sawsen.fattahi@gmail.com",
   "type": "commonjs",
   "types": "dist/index.d.ts",
+  "files": ["dist"],
   "repository": {
     "type": "git",
     "url": "https://github.com/sawsenFattahi/sw-async-logger.git"
