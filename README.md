@@ -72,9 +72,27 @@ To change this, set the LOG_FILE environment variable:
 
 export LOG_FILE=custom-log.txt
 
-📄 License
+---
+
+### 📄 License
 
 This project is licensed under the MIT License.
 🤝 Contributing
 
 Feel free to fork and submit PRs! 🚀
+
+---
+
+### 📬 Contact
+
+Created by sawssen Fattahi https://github.com/sawsenFattahi
+
+
+---
+
+### **🆕 Updates:**
+✅ **Added a "How to Use" section** with clear steps  
+✅ **Explained configuration (changing log file name)**  
+✅ **More clarity on error logging and outputs**  
+
+Let me know if you need any other changes! 🚀🔥

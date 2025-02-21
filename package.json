@@ -1,0 +1,35 @@
+{
+  "name": "sw-async-logger",
+  "version": "1.0.0",
+  "description": "A simple node js library to log async function with error handling and performance tracking",
+  "keywords": [
+    "error",
+    "logs",
+    "async"
+  ],
+  "license": "MIT",
+  "author": "sawsen.fattahi@gmail.com",
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/your-repo.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "demo": "ts-node demo/index.ts"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "perf_hooks": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.4",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}

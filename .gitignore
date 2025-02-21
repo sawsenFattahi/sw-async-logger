@@ -1,0 +1,38 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+log.txt
+log-test.txt
+*.log
+logs/
+
+# Build files
+dist/
+build/
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jest coverage & test logs
+coverage/
+.nyc_output/
+jest-debug.log
+
+# TypeScript output
+*.d.ts
+*.js.map

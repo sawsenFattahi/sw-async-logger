@@ -1,0 +1,1 @@
+export { logAsync, LogLevel, Logger } from './logDecorator';
