@@ -13,7 +13,7 @@ A simple **Node.js** library to log **async functions** with error handling and 
 ## 📦 Installation
 ```sh
 npm install sw-async-logger
-
+```
 🔧 How to Use
 1️⃣ Import the Logger
 
