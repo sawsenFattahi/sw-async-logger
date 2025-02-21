@@ -1,11 +1,12 @@
 {
-  "name": "sw-async-logger",
-  "version": "1.0.3",
+  "name": "perf-async-logger",
+  "version": "1.0.0",
   "description": "A simple node js library to log async function with error handling and performance tracking",
   "keywords": [
     "error",
-    "logs",
-    "async"
+    "logger",
+    "async",
+    "performance"
   ],
   "license": "MIT",
   "author": "sawsen.fattahi@gmail.com",
