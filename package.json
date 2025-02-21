@@ -1,6 +1,6 @@
 {
   "name": "sw-async-logger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple node js library to log async function with error handling and performance tracking",
   "keywords": [
     "error",
