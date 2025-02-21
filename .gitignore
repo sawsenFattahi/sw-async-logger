@@ -34,5 +34,4 @@ coverage/
 jest-debug.log
 
 # TypeScript output
-*.d.ts
 *.js.map

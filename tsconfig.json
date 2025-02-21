@@ -6,8 +6,8 @@
         "rootDir": ".",
         "strict": true,
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
-
+        "emitDecoratorMetadata": true,
+        "declaration": true
     },
     "include": ["src", "demo", "tests"],
     "exclude": [
