@@ -1,6 +1,6 @@
 {
   "name": "sw-async-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple node js library to log async function with error handling and performance tracking",
   "keywords": [
     "error",
@@ -12,7 +12,7 @@
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/your-repo.git"
+    "url": "https://github.com/sawsenFattahi/sw-async-logger.git"
   },
   "main": "index.js",
   "scripts": {
