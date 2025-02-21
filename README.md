@@ -12,18 +12,18 @@ A simple **Node.js** library to log **async functions** with error handling and 
 
 ## 📦 Installation
 ```sh
-npm install sw-async-logger
+npm install perf-async-logger
 ```
 ## 🔧 How to Use
 1️⃣ Import the Logger
 
-import { logAsync, Logger, LogLevel } from "sw-async-logger";
+import { logAsync, Logger, LogLevel } from "perf-async-logger";
 
 2️⃣ Use the @logAsync Decorator
 
 Apply @logAsync to your async functions:
 
-import { logAsync } from "sw-async-logger";
+import { logAsync } from "perf-async-logger";
 
 class MyService {
     @logAsync
@@ -60,7 +60,7 @@ The library logs start time, execution time, and errors:
 
 You can manually log messages using the Logger class:
 
-import { Logger, LogLevel } from "sw-async-logger";
+import { Logger, LogLevel } from "perf-async-logger";
 
 Logger.log(LogLevel.INFO, "This is an info message");
 Logger.log(LogLevel.ERROR, "Something went wrong!");
