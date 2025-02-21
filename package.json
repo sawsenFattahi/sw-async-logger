@@ -1,6 +1,6 @@
 {
   "name": "perf-async-logger",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A simple node js library to log async function with error handling and performance tracking",
   "keywords": [
     "error",
