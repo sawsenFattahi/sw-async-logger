@@ -14,7 +14,7 @@ A simple **Node.js** library to log **async functions** with error handling and 
 ```sh
 npm install sw-async-logger
 ```
-🔧 How to Use
+## 🔧 How to Use
 1️⃣ Import the Logger
 
 import { logAsync, Logger, LogLevel } from "async-logger";
