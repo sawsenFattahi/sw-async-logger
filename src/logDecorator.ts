@@ -19,24 +19,53 @@ export class Logger {
     }
 }
 
+function safeStringify(obj: any) {
+    try {
+        return JSON.stringify(obj);
+    } catch (error) {
+        return '[Unserializable Object]';
+    }
+}
+
+function truncate(str: string, length = 500) {
+    return str.length > length ? str.substring(0, length) + '...' : str;
+}
+
 export function logAsync(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
     const originalMethod = descriptor.value;
-    descriptor.value = async function (...args: any[]) {
+
+    descriptor.value = function (...args: any[]) {
         const startTime = performance.now();
         try {
-            Logger.log(LogLevel.INFO, `Start ${propertyKey} with args: ${JSON.stringify(args)}`);
-            const result = await originalMethod.apply(this, args);
-            const endTime = performance.now();
-            Logger.log(LogLevel.INFO, `End ${propertyKey} with result: ${JSON.stringify(result)}`);
-            const executionTime = endTime - startTime;
-            Logger.log(LogLevel.INFO, `${propertyKey} executed in ${executionTime}ms`);
-            return result;
+            Logger.log(LogLevel.INFO, `Start ${propertyKey} with args: ${safeStringify(args)}`);
+
+            const result = originalMethod.apply(this, args);
+
+            if (result instanceof Promise) {
+                return result
+                    .then((res) => {
+                        const endTime = performance.now();
+                        Logger.log(LogLevel.INFO, `End ${propertyKey} with result: ${truncate(safeStringify(res))}`);
+                        Logger.log(LogLevel.INFO, `${propertyKey} executed in ${endTime - startTime}ms`);
+                        return res;
+                    })
+                    .catch((error) => {
+                        const endTime = performance.now();
+                        Logger.log(LogLevel.ERROR, `${propertyKey} executed in ${endTime - startTime}ms with error: ${error.message}`);
+                        throw error;
+                    });
+            } else {
+                const endTime = performance.now();
+                Logger.log(LogLevel.INFO, `End ${propertyKey} with result: ${truncate(safeStringify(result))}`);
+                Logger.log(LogLevel.INFO, `${propertyKey} executed in ${endTime - startTime}ms`);
+                return result;
+            }
         } catch (error: any) {
             const endTime = performance.now();
-            const executionTime = endTime - startTime;
-            Logger.log(LogLevel.ERROR, `${propertyKey} executed in ${executionTime}ms with error: ${error.message}`);
+            Logger.log(LogLevel.ERROR, `${propertyKey} executed in ${endTime - startTime}ms with error: ${error.message}`);
             throw error;
         }
     };
+
     return descriptor;
 }
