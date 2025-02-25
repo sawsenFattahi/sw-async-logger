@@ -1,5 +1,6 @@
 import * as fs from 'fs';
-import { logAsync } from "../src";
+import { logAsync } from '../logDecorator';
+
 
 class TestService {
     @logAsync

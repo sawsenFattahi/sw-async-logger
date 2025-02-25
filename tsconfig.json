@@ -9,6 +9,6 @@
         "emitDecoratorMetadata": true,
         "declaration": true       
     },
-    "include": ["src", "test", "demo"],          
+    "include": ["src"],          
     "exclude": ["node_modules"]
 }

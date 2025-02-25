@@ -1,4 +1,5 @@
-import { logAsync } from "../src";
+import { logAsync } from "../logDecorator";
+
 
 class ExampleService {
     @logAsync

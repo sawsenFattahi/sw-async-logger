@@ -23,7 +23,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "demo": "ts-node demo/index.ts"
+    "demo": "ts-node src/demo/index.ts"
   },
   "dependencies": {
     "fs": "^0.0.1-security",
